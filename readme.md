@@ -19,11 +19,11 @@ Sometimes when you're looking to solve a problem, you find that another develope
 Check out <a href="http://ngmodules.org" target="_blank">ng-modules</a> to find popular Angular Directives to add to your projects.
 
 
-## Making Your Own Directive
+## Making Your Own Directive - DEMO
 
 ### A Current Weather Example
 
-**Follow Along** by putting these code samples into an Angular project.
+**Catch Up** by putting these code samples into an Angular project.
 
 > Reference: <a href="http://www.ng-newsletter.com/posts/directives.html" target="_blank">ng-newsletter blog post on directives</a>
 
@@ -37,7 +37,7 @@ Place this HTML anywhere inside your Angular controller:
 <current-weather city="San Francisco"></current-weather>
 ```
 
-Add this directive to your app:
+Add this directive to your app _(NOTE: We will cover a lot of this, such as $scope and $http, in a later lesson)_:
 
 ```js
 // app.js
@@ -76,10 +76,10 @@ app.directive('currentWeather', function() {
 The first option in an Angular directive is the `restrict` option. This option lets you specify how exactly you'd like to call the directive in HTML. See the options below; A and E are the most popular.
 
 ```html
-'A' - <span ng-sparkline></span>
-'E' - <ng-sparkline></ng-sparkline>
-'C' - <span class="ng-sparkline"></span>
-'M' - <!-- directive: ng-sparkline -->
+'A' - <span current-weather></span>
+'E' - <current-weather></current-weather>
+'C' - <span class="current-weather"></span>
+'M' - <!-- directive: current-weather -->
 ```
 
 #### template and templateUrl
@@ -110,10 +110,13 @@ By default, scopes do inherit the scope of their local controller just like they
   <div scope-example ng-model="recipient.email" on-send="sendMail()" from-name="ari@fullstack.io">
   ```
 
-#### controller
+#### controller and link
 
 The controller option allows you to define a controller specific and isolated to the directive.
 
-#### link()
-
 The `link()` option is the meat and potatoes of the directive. Inside this function, you specify what you'd like the directive to do, and you can update scope.
+
+#### Question:
+How would you show the weather for multiple cities?
+
+
