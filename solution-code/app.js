@@ -1,5 +1,6 @@
-angular.module('newApp', [])
-    .directive('currentWeather', function(){
+var app = angular.module('newApp', []);
+
+app.directive('currentWeather', function(){
         return {
             restrict: 'E',
             scope: {
@@ -20,5 +21,5 @@ angular.module('newApp', [])
                 scope.weather = scope.getWeather(attrs.city);
             }
         }
-    })
+    });
 

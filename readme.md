@@ -2,6 +2,14 @@
 
 Directives are snippets of HTML with their own custom JavaScript logic. Angular's concept of directives helps separate concerns and duties of code while making your views DRY and logic-less. Angular directives are very modular and can be added, shared, and swapped between projects.
 
+## Angular's Built-in Directives (Warm-up)
+
+Check out the [AngularJS API Docs](https://docs.angularjs.org/api) to implement
+
+* Begin with your intro project (or create a new one)
+* Work in pairs to implement one or more of the following:  ngClick, ngIf, ngHide, ngShow, ngRepeat
+
+
 ## Adding an External Directive
 
 Sometimes when you're looking to solve a problem, you find that another developer has already made a solution in the form of a directive. Now the challenge is how to include that directive in your project.
@@ -41,7 +49,7 @@ Add this directive to your app _(NOTE: We will cover a lot of this, such as $sco
 
 ```js
 // app.js
-angular.module('yourApp', []);
+var app = angular.module('yourApp', []);
 
 app.directive('currentWeather', function() {
   return {
@@ -117,6 +125,5 @@ The controller option allows you to define a controller specific and isolated to
 The `link()` option is the meat and potatoes of the directive. Inside this function, you specify what you'd like the directive to do, and you can update scope.
 
 #### Question:
-How would you show the weather for multiple cities?
-
+* How would you show the weather for multiple cities?
 
