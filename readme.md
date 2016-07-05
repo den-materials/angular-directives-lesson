@@ -7,7 +7,7 @@ Directives are snippets of HTML with their own custom JavaScript logic. Angular'
 Check out the [AngularJS API Docs](https://docs.angularjs.org/api) to implement
 
 * Begin with your intro project (or create a new one)
-* Work in pairs to implement one or more of the following:  ngClick, ngIf, ngHide, ngShow, ngRepeat
+* Work in pairs to implement one or more of the following:  ngClick, ngIf, ngHide, ngShow
 
 
 ## Adding an External Directive
