@@ -127,3 +127,7 @@ The `link()` option is the meat and potatoes of the directive. Inside this funct
 #### Question:
 * How would you show the weather for multiple cities?
 
+
+## Licensing
+All content is licensed under a CC­BY­NC­SA 4.0 license.
+All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
