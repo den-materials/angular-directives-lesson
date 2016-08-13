@@ -1,14 +1,35 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Custom & External Angular Directives
 
+<!--1:00 5 minutes -->
+
+<!--Hook: Raise your hand if you find the process of communicating between your HTML and JS frustrating.  For those who raised their hands, today we will share a couple ways to make your life easier.  And for those who didn't, I believe we will make that communication even tighter.  Today, we will be talking about directives and... -->
+
 Directives are snippets of HTML with their own custom JavaScript logic. Angular's concept of directives helps separate concerns and duties of code while making your views DRY and logic-less. Angular directives are very modular and can be added, shared, and swapped between projects.
+
+### What are the objectives?
+<!-- specific/measurable goal for students to achieve -->
+*After this workshop, developers will be able to:*
+
+* **Understand** the purpose and function of Angular directives
+* **Find** the correct directive for a web app's needs
+* **Create** a simple custom directive
+
+### Where should we be now?
+<!-- call out the skills that are prerequisites -->
+*Before this workshop, developers should already be able to:*
+
+* **Implement** an Angular app with a single page and single controller
+
+<!--1:05 15 minutes -->
 
 ## Angular's Built-in Directives (Warm-up)
 
-Check out the [AngularJS API Docs](https://docs.angularjs.org/api) to implement
+Check out the [AngularJS API Docs](https://docs.angularjs.org/api) to implement a simple app.
 
-* Begin with your intro project (or create a new one)
-* Work in pairs to implement two or more of the following:  ngClick, ngIf, ngHide, ngShow, ngModel
+* Begin with your intro project or create a new one
+* Work in pairs to implement as many of the following directives as possible:  ngClick, ngIf, ngHide, ngShow, ngModel
 
+<!--1:20 15 minutes -->
 
 ## Adding an External Directive
 
@@ -24,32 +45,33 @@ Sometimes when you're looking to solve a problem, you find that another develope
   angular.module('yourApp', ['ngResource', 'ngMap', 'pickadate', 'ui.bootstrap']);
   ```
 
-Check out <a href="http://ngmodules.org" target="_blank">ng-modules</a> to find popular Angular Directives to add to your projects.
+Check out <a href="http://ngmodules.org" target="_blank">ng-modules</a> to find popular Angular Directives to add to your project.  Choose two to add with your partner.
 
+<!-- Have developers focus on adding just one first, and if they have time, add the second.  -->
+
+<!--1:35 40 minutes -->
 
 ## Making Your Own Directive - DEMO
 
 ### A Current Weather Example
 
-**Catch Up** by putting these code samples into an Angular project.
-
-> Reference: <a href="http://www.ng-newsletter.com/posts/directives.html" target="_blank">ng-newsletter blog post on directives</a>
-
 Imagine you wanted to make a box that displayed a city's current weather that was re-useable across pages for various cities. A directive would be a great solution! Let's look at how you'd build this directive that fetches a city's weather data and displays it on the page.
+
+<!-- Half-mast. Show these quickly, then jump to explanations below.  Finally come back and ask students to copy into their app. -->
 
 Place this HTML anywhere inside your Angular controller:
 
 ```html
 <!-- index.html -->
 
-<current-weather city="San Francisco"></current-weather>
+<current-weather city="Denver"></current-weather>
 ```
 
 Add this directive to your app _(NOTE: We will cover a lot of this, such as $scope and $http, in a later lesson)_:
 
 ```js
 // app.js
-var app = angular.module('yourApp', []);
+var app = angular.module('ngCustomDirectives', []);
 
 app.directive('currentWeather', function() {
   return {
@@ -68,12 +90,12 @@ app.directive('currentWeather', function() {
                         .success(function(data){
                             $scope.weather = data;
                         });
-                }
+                };
             }],
     link: function (scope, element, attrs) {
       scope.weather = scope.getWeather(attrs.city);
     }
-  }
+  };
 });
 ```
 
@@ -127,6 +149,10 @@ The `link()` option is the meat and potatoes of the directive. Inside this funct
 #### Question:
 * How would you show the weather for multiple cities?
 
+### Further Resources
+
+* [ng-newsletter Blog Post on Directives](http://www.ng-newsletter.com/posts/directives.html)
+* [Explaining Scope Symbols in Directives](http://stackoverflow.com/questions/21712147/angularjs-differences-among-in-directive-scope)
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
