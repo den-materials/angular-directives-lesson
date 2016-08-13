@@ -146,6 +146,10 @@ The controller option allows you to define a controller specific and isolated to
 
 The `link()` option is the meat and potatoes of the directive. Inside this function, you specify what you'd like the directive to do, and you can update scope.
 
+### Challenge:
+
+Add this new custom directive to your app.  Make sure you get an API key for the weather API.  Once everything works, make it beautiful and see what other information you could include on your dynamic app.
+
 #### Question:
 * How would you show the weather for multiple cities?
 
