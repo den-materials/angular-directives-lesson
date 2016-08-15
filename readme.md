@@ -20,7 +20,7 @@ Directives are snippets of HTML with their own custom JavaScript logic. Angular'
 
 * **Implement** an Angular app with a single page and single controller
 
-<!--1:05 15 minutes -->
+<!--1:05 20 minutes -->
 
 ## Angular's Built-in Directives (Warm-up)
 
@@ -29,7 +29,7 @@ Check out the [AngularJS API Docs](https://docs.angularjs.org/api) to implement 
 * Begin with your intro project or create a new one
 * Work in pairs to implement as many of the following directives as possible:  ngClick, ngIf, ngHide, ngShow, ngModel
 
-<!--1:20 15 minutes -->
+<!--1:25 20 minutes -->
 
 ## Adding an External Directive
 
@@ -49,7 +49,7 @@ Check out <a href="http://ngmodules.org" target="_blank">ng-modules</a> to find 
 
 <!-- Have developers focus on adding just one first, and if they have time, add the second.  -->
 
-<!--1:35 40 minutes -->
+<!--1:45 30-35 minutes -->
 
 ## Making Your Own Directive - DEMO
 
@@ -105,6 +105,11 @@ app.directive('currentWeather', function() {
 
 The first option in an Angular directive is the `restrict` option. This option lets you specify how exactly you'd like to call the directive in HTML. See the options below; A and E are the most popular.
 
+- A : Attribute
+- E : Element
+- C : Class
+- M : Comment
+
 ```html
 'A' - <span current-weather></span>
 'E' - <current-weather></current-weather>
@@ -151,6 +156,7 @@ The `link()` option is the meat and potatoes of the directive. Inside this funct
 Add this new custom directive to your app.  Make sure you get an API key for the weather API.  Once everything works, make it beautiful and see what other information you could include on your dynamic app.
 
 #### Question:
+* What are the main Angular directive options we discussed today?  What do they define?
 * How would you show the weather for multiple cities?
 
 ### Further Resources
