@@ -1,8 +1,8 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Custom & External Angular Directives
 
-<!--1:00 5 minutes -->
+<!--9:30 5 minutes -->
 
-<!--Hook: Raise your hand if you find the process of communicating between your HTML and JS frustrating.  For those who raised their hands, today we will share a couple ways to make your life easier.  And for those who didn't, I believe we will make that communication even tighter.  Today, we will be talking about directives and... -->
+<!--Hook: Raise your hand if you find the process of communicating between your HTML and JS frustrating.  DOM Manipulation, string manipulation, etc.  For those who raised their hands, today we will share a couple ways to make your life easier.  And for those who didn't, I believe we will make that communication even tighter.  Today, we will be talking about directives and... -->
 
 Directives are snippets of HTML with their own custom JavaScript logic. Angular's concept of directives helps separate concerns and duties of code while making your views DRY and logic-less. Angular directives are very modular and can be added, shared, and swapped between projects.
 
@@ -12,7 +12,7 @@ Directives are snippets of HTML with their own custom JavaScript logic. Angular'
 
 * **Understand** the purpose and function of Angular directives
 * **Find** the correct directive for a web app's needs
-* **Create** a simple custom directive
+* **Create** a custom directive
 
 ### Where should we be now?
 <!-- call out the skills that are prerequisites -->
@@ -20,20 +20,22 @@ Directives are snippets of HTML with their own custom JavaScript logic. Angular'
 
 * **Implement** an Angular app with a single page and single controller
 
-<!--1:05 20 minutes -->
+<!--9:35 20 minutes -->
 
 ## Angular's Built-in Directives (Warm-up)
 
 Check out the [AngularJS API Docs](https://docs.angularjs.org/api) to implement a simple app.
 
-* Begin with your intro project or create a new one
+* Create a new project the same way we did in the Angular Intro lesson (this will involve `index.html`, `app.js`, and `bower`)
 * Work in pairs to implement as many of the following directives as possible:  ngClick, ngIf, ngHide, ngShow, ngModel
 
-<!--1:25 20 minutes -->
+<!--9:55 20 minutes -->
 
 ## Adding an External Directive
 
 Sometimes when you're looking to solve a problem, you find that another developer has already made a solution in the form of a directive. Now the challenge is how to include that directive in your project.
+
+<!--Demo this with ngStorage, note that googling a library may give good/better docs-->
 
 1. Add the directive's file(s) to your project.
 2. Include the file(s) in `index.html`.
@@ -45,11 +47,11 @@ Sometimes when you're looking to solve a problem, you find that another develope
   angular.module('yourApp', ['ngResource', 'ngMap', 'pickadate', 'ui.bootstrap']);
   ```
 
-Check out <a href="http://ngmodules.org" target="_blank">ng-modules</a> to find popular Angular Directives to add to your project.  Choose two to add with your partner.
+Check out <a href="http://ngmodules.org" target="_blank">ng-modules</a> to find popular Angular Directives to add to your project.  Choose one to add with your partner.
 
 <!-- Have developers focus on adding just one first, and if they have time, add the second.  -->
 
-<!--1:45 30-35 minutes -->
+<!--10:15 30-35 minutes -->
 
 ## Making Your Own Directive - DEMO
 
