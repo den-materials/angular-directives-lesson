@@ -61,7 +61,7 @@ Imagine you wanted to make a box that displayed a city's current weather that wa
 
 <!-- Half-mast. Show these quickly, then jump to explanations below.  Finally come back and ask students to copy into their app. -->
 
-Place this HTML anywhere inside your Angular controller:
+Place this HTML anywhere inside your `index.html` page:
 
 ```html
 <!-- index.html -->
@@ -75,23 +75,24 @@ Add this directive to your app _(NOTE: We will cover a lot of this, such as $sco
 // app.js
 var app = angular.module('ngCustomDirectives', []);
 
-app.directive('currentWeather', function() {
+app.directive('currentWeather', function($sce) {
   return {
     restrict: 'E',
     scope: {
       city: '@'
     },
     template: '<div class="current-weather"><h4>Weather for {{city}}</h4>{{weather.main.temp}}</div>',
-    // templateUrl: 'templates/currentWeatherTemplate.html',
-    // transclude: true,
     controller: ['$scope', '$http', function($scope, $http){
-                var url="http://api.openweathermap.org/data/2.5/weather?mode=json&cnt=7&units=imperial&callback=JSON_CALLBACK&q=";
+                var url="http://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
                 var apikey = "&appid="; // go generate an API key and plug it in here.
                 $scope.getWeather = function(city){
-                    $http({method: 'JSONP', url: url + city + apikey})
-                        .success(function(data){
-                            $scope.weather = data;
-                        });
+                	var urlToSend = $sce.trustAsResourceUrl(url+city+apikey);
+                    $http({method: 'JSONP', url: urlToSend})
+                        .then(function(response){
+                            $scope.weather = response.data;
+                        }, function(error) {
+                        		console.log(error);
+                      	});
                 };
             }],
     link: function (scope, element, attrs) {
@@ -157,7 +158,7 @@ The `link()` option is the meat and potatoes of the directive. Inside this funct
 
 Add this new custom directive to your app.  Make sure you get an API key for the weather API.  Once everything works, make it beautiful and see what other information you could include on your dynamic app.
 
-#### Question:
+#### Questions:
 * What are the main Angular directive options we discussed today?  What do they define?
 * How would you show the weather for multiple cities?
 
