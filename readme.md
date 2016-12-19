@@ -26,6 +26,8 @@ Directives are snippets of HTML with their own custom JavaScript logic. Angular'
 
 Check out the [AngularJS API Docs](https://docs.angularjs.org/api) to implement a simple app.
 
+<!--You may want to model this and/or direct to angular-intro before leaving it up to devs -->
+
 * Create a new project the same way we did in the Angular Intro lesson (this will involve `index.html`, `app.js`, and `bower`)
 * Work in pairs to implement as many of the following directives as possible:  ngClick, ngIf, ngHide, ngShow, ngModel
 
@@ -36,6 +38,8 @@ Check out the [AngularJS API Docs](https://docs.angularjs.org/api) to implement 
 Sometimes when you're looking to solve a problem, you find that another developer has already made a solution in the form of a directive. Now the challenge is how to include that directive in your project.
 
 <!--Demo this with ngStorage, note that googling a library may give good/better docs-->
+
+<!--Actually 10:22 before student exercise -->
 
 1. Add the directive's file(s) to your project.
 2. Include the file(s) in `index.html`.
@@ -51,7 +55,9 @@ Check out <a href="http://ngmodules.org" target="_blank">ng-modules</a> to find 
 
 <!-- Have developers focus on adding just one first, and if they have time, add the second.  -->
 
-<!--10:15 30-35 minutes -->
+<!--10:15 30 minutes -->
+
+<!--No time to ask devs to follow along -->
 
 ## Making Your Own Directive - DEMO
 
@@ -157,6 +163,10 @@ The `link()` option is the meat and potatoes of the directive. Inside this funct
 ### Challenge:
 
 Add this new custom directive to your app.  Make sure you get an API key for the weather API.  Once everything works, make it beautiful and see what other information you could include on your dynamic app.
+
+<!--11:06 actually, and didn't get to questions -->
+
+<!--10:45 5 minutes -->
 
 #### Questions:
 * What are the main Angular directive options we discussed today?  What do they define?
