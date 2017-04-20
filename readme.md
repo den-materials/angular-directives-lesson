@@ -29,7 +29,7 @@ Check out the [AngularJS API Docs](https://docs.angularjs.org/api) to implement 
 <!--You may want to model this and/or direct to angular-intro before leaving it up to devs -->
 
 * Create a new project the same way we did in the Angular Intro lesson (this will involve `index.html`, `app.js`, and `bower`)
-* Work in pairs to implement as many of the following directives as possible:  ngClick, ngIf, ngHide, ngShow, ngModel
+* Work in squads to implement as many of the following directives as possible:  ngClick, ngIf, ngHide, ngShow, ngModel
 
 <!--9:55 20 minutes -->
 
@@ -51,8 +51,9 @@ Sometimes when you're looking to solve a problem, you find that another develope
   angular.module('yourApp', ['ngResource', 'ngMap', 'pickadate', 'ui.bootstrap']);
   ```
 
-Check out <a href="http://ngmodules.org" target="_blank">ng-modules</a> to find popular Angular Directives to add to your project.  Choose one to add with your partner.
+Check out <a href="http://ngmodules.org" target="_blank">ng-modules</a> to find popular Angular Directives to add to your project.  Choose one to add with your squad.
 
+<!-- Point out that if there is a GitHub for the module, they should check that out in addition to the ngmodules.org stuff -->
 <!-- Have developers focus on adding just one first, and if they have time, add the second.  -->
 
 <!--10:15 30 minutes -->
@@ -151,7 +152,7 @@ By default, scopes do inherit the scope of their local controller just like they
   ```html
   <input type="text" ng-model="recipient.email">
   <!-- invoke the directive -->
-  <div scope-example ng-model="recipient.email" on-send="sendMail()" from-name="ari@fullstack.io">
+  <div scope-example ng-model="recipient.email" on-send="sendMail()" from-name="abc@emailplace.io">
   ```
 
 #### controller and link
