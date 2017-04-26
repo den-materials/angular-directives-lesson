@@ -1,5 +1,6 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Custom & External Angular Directives
 
+<!--9:41 WDI3 -->
 <!--9:30 5 minutes -->
 
 <!--Hook: Raise your hand if you find the process of communicating between your HTML and JS frustrating.  DOM Manipulation, string manipulation, etc.  For those who raised their hands, today we will share a couple ways to make your life easier.  And for those who didn't, I believe we will make that communication even tighter.  Today, we will be talking about directives and... -->
@@ -20,17 +21,18 @@ Directives are snippets of HTML with their own custom JavaScript logic. Angular'
 
 * **Implement** an Angular app with a single page and single controller
 
+<!--9:46 turning over to devs WDI3 -->
 <!--9:35 20 minutes -->
 
 ## Angular's Built-in Directives (Warm-up)
 
 Check out the [AngularJS API Docs](https://docs.angularjs.org/api) to implement a simple app.
 
-<!--You may want to model this and/or direct to angular-intro before leaving it up to devs -->
-
 * Create a new project the same way we did in the Angular Intro lesson (this will involve `index.html`, `app.js`, and `bower`)
 * Work in squads to implement as many of the following directives as possible:  ngClick, ngIf, ngHide, ngShow, ngModel
 
+<!--10:03 WDI3 -->
+<!--10:11 turning over to devs -->
 <!--9:55 20 minutes -->
 
 ## Adding an External Directive
@@ -56,6 +58,8 @@ Check out <a href="http://ngmodules.org" target="_blank">ng-modules</a> to find 
 <!-- Point out that if there is a GitHub for the module, they should check that out in addition to the ngmodules.org stuff -->
 <!-- Have developers focus on adding just one first, and if they have time, add the second.  -->
 
+<!--10:24 WDI3 -->
+
 <!--10:15 30 minutes -->
 
 <!--No time to ask devs to follow along -->
@@ -80,7 +84,7 @@ Add this directive to your app _(NOTE: We will cover a lot of this, such as $sco
 
 ```js
 // app.js
-var app = angular.module('ngCustomDirectives', []);
+var app = angular.module('yourApp', []);
 
 app.directive('currentWeather', function($sce) {
   return {
@@ -163,6 +167,8 @@ The `link()` option is the meat and potatoes of the directive. Inside this funct
 
 ### Challenge:
 
+<!--Just had devs copy and paste after I went through the whole thing -->
+
 Add this new custom directive to your app.  Make sure you get an API key for the weather API.  Once everything works, make it beautiful and see what other information you could include on your dynamic app.
 
 <!--11:06 actually, and didn't get to questions -->
@@ -172,6 +178,8 @@ Add this new custom directive to your app.  Make sure you get an API key for the
 #### Questions:
 * What are the main Angular directive options we discussed today?  What do they define?
 * How would you show the weather for multiple cities?
+
+<!--10:56 WDI3-->
 
 ### Further Resources
 
